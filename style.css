@@ -1,3 +1,19 @@
 .grid{
     display: flex;
+    flex-direction: column;
+    border: 20px solid green;
+    margin: 20px;
+}
+
+.column{
+    display: flex;
+}
+
+.square{
+    background: red;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: .5px;
 }

@@ -27,4 +27,27 @@ function createGrid(){
     }
     
 }
+
+
 createGrid();
+//figure out a way to use the mousemove event handler
+//make it so it changes color every time a square is touched
+//would it be better to do the event handler on the column divs or the individual square?
+// let sqr = document.querySelectorAll("square");
+let sqr = document.querySelectorAll(".square");
+let clm = document.querySelector("column");
+let grid = document.querySelector("grid");
+
+
+sqr.forEach(sqr =>{
+    sqr.addEventListener("mousemove", () =>{
+        sqr.style.cssText = "color: blue; background: blue";
+    })
+});
+
+// for(let i = 0; i < sqr.length; i++){
+//     sqr[i].addEventListener('click', () =>{
+//         sqr[i].style.cssText = "color: blue; background: white";
+//         console.log("jhe");
+//     });
+// }

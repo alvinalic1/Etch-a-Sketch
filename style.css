@@ -21,8 +21,8 @@
 
 .square{
     background: rgb(197, 189, 189);
-    width: 10px;
-    height: 10px;
+    width: 100px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     border: 1px solid black;

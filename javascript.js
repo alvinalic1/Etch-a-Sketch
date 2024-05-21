@@ -1,13 +1,13 @@
 function createGrid(numberOfSquares){
     let totalSquare = numberOfSquares * numberOfSquares;
     let grid = document.querySelector(".grid");
-    for(let i = 0; i < 16*16; i++)
+    for(let i = 0; i < totalSquare; i++)
     {
-        if(i%16 == 0){
+        if(i%numberOfSquares == 0){
             const column = document.createElement("div");
             column.className = 'column';
             grid.append(column);
-            for(let j = 0; j < 16; j++){
+            for(let j = 0; j < numberOfSquares; j++){
                 const square = document.createElement("div");
                 square.className = 'square';
                 column.append(square);
@@ -20,10 +20,8 @@ function createGrid(numberOfSquares){
 }
 
 function removeGrid(){
-    let grid = document.querySelector(".grid");
-    while(grid.firstChild){
-        grid.removeChild(grid.lastChild);
-    }
+    document.querySelectorAll(".square").forEach(e => e.remove());
+    return;
 }
 
 
@@ -33,10 +31,11 @@ createGrid(16);
 let button = document.querySelector(".button");
 
 button.addEventListener("click", () =>{
-    // let answer = prompt("How many squares would you like?");
-    // newGrid(answer);
-    // hoverSquares();
     removeGrid();
+    let answer = prompt("How many squares would you like?");
+    
+    newGrid(answer);
+    hoverSquares();
 
 })
 

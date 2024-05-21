@@ -15,28 +15,28 @@ function createGrid(numberOfSquares){
         }
         
     }
+    hoverSquares();
     
 }
 
+function removeGrid(){
+    let grid = document.querySelector(".grid");
+    while(grid.firstChild){
+        grid.removeChild(grid.lastChild);
+    }
+}
 
-// createGrid();
 
-// let sqr = document.querySelectorAll(".square");
+createGrid(16);
 
-
-
-// sqr.forEach(sqr =>{
-//     sqr.addEventListener("mouseover", () =>{
-//         sqr.style.cssText = "color: blue; background: blue";
-//     })
-// });
 
 let button = document.querySelector(".button");
 
 button.addEventListener("click", () =>{
-    let answer = prompt("How many squares would you like?");
-    newGrid(answer);
-    hoverSquares();
+    // let answer = prompt("How many squares would you like?");
+    // newGrid(answer);
+    // hoverSquares();
+    removeGrid();
 
 })
 

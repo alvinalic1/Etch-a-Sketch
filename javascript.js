@@ -21,6 +21,7 @@ function createGrid(numberOfSquares){
 
 function removeGrid(){
     document.querySelectorAll(".square").forEach(e => e.remove());
+    document.querySelectorAll(".column").forEach(e => e.remove());
     return;
 }
 

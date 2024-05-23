@@ -16,7 +16,6 @@ function createGrid(numberOfSquares) {
                 column.append(square);
             }
         }
-
     }
     hoverSquares();
 
@@ -38,16 +37,7 @@ createGrid(16);
 eventListeners();
 
 
-// let PickSquaresbutton = document.querySelector(".pickSquares");
 
-// PickSquaresbutton.addEventListener("click", () => {
-//     removeGrid();
-//     let answer = prompt("How many squares would you like?");
-
-//     newGrid(answer);
-//     hoverSquares();
-
-// })
 
 /*
 Creates a new grid based on the given parameter
@@ -103,19 +93,6 @@ function getRandomColor() {
 }
 
 
-// let hover = document.querySelector(".hover");
-
-// hover.addEventListener("click", () => {
-//     removeStyling();
-//     hoverSquares()
-// });
-
-// let randomColors = document.querySelector(".randomColors");
-
-// randomColors.addEventListener("click", () => {
-//     removeStyling();
-//     colorSquares();
-// })
 
 
 function eventListeners() {

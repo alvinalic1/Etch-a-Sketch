@@ -1,3 +1,5 @@
+const colors = ['#ff0000', '#00ff00', '#0000ff'];
+
 function createGrid(numberOfSquares){
     let totalSquare = numberOfSquares * numberOfSquares;
     let grid = document.querySelector(".grid");
@@ -15,7 +17,7 @@ function createGrid(numberOfSquares){
         }
         
     }
-    hoverSquares();
+    colorSquares();
     
 }
 
@@ -29,14 +31,14 @@ function removeGrid(){
 createGrid(16);
 
 
-let button = document.querySelector(".button");
+let PickSquaresbutton = document.querySelector(".pickSquares");
 
-button.addEventListener("click", () =>{
+PickSquaresbutton.addEventListener("click", () =>{
     removeGrid();
     let answer = prompt("How many squares would you like?");
     
     newGrid(answer);
-    hoverSquares();
+    colorSquares();
 
 })
 
@@ -50,13 +52,32 @@ function newGrid(numberOfSquares){
 
 
 
-function hoverSquares(){
+function colorSquares(){
     let sqr = document.querySelectorAll(".square");
-
+    
     sqr.forEach(sqr =>{
         sqr.addEventListener("mouseover", () =>{
-            sqr.style.cssText = "color: blue; background: blue";
+            sqr.style.cssText=`background: ${getRandomColor()}`;
         })
     });
 
+}
+
+function hoverSquares(){
+    let sqr = document.querySelectorAll(".square"); 
+
+    sqr.forEach(sqr =>{
+        sqr.addEventListener("mouseover", () =>{
+            sqr.style.cssText = "background: grey";
+        })
+    });
+}
+
+function getRandomColor(){
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+  return color;
 }

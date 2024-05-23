@@ -1,13 +1,13 @@
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    background: black;
 }
 .grid{
     display: flex;
     flex-direction: column;
-    border: 10px solid green;
+    border: 5px solid white;
     margin: 10px;
     width: 500px;
     height: 500px;
@@ -16,7 +16,10 @@ body{
 .title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 22px;
+    color: white;
 }
+
+
 
 .column{
     display: flex;

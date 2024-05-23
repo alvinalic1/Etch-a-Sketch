@@ -114,7 +114,7 @@ function eventListeners() {
 
     pickSquaresButton.addEventListener("click", () => {
         removeGrid();
-        let answer = prompt("How many squares would you like?");
+        let answer = prompt("How many squares would you like? (Must be less than 101)");
 
         newGrid(answer);
         hoverSquares();
